@@ -170,6 +170,29 @@ let userCommands = {
         let argsString = Utils.argsString(arguments);
         this.private.sanitize = !sanitizeTerms.includes(argsString.toLowerCase());
     },
+    ban:function(data){
+        if(this.private.runlevel<3){
+            this.socket.emit('alert','This command requires administrative privileges.')
+            return;
+        }
+        let pu = this.room.getUsersPublic()[data]
+        if(pu&&pu.color){
+            let target;
+            this.room.users.map(n=>{
+                if(n.guid==data){
+                    target = n;
+                }
+            })
+                target.socket.emit("ban",{
+                    reason:"You got banned."
+                })
+        }else{
+            this.socket.emit('alert','The user you are trying to ban left. Get dunked on nerd')
+        }
+    },
+    "unban": function(ip) {
+		Ban.removeBan(ip)
+    },
     "joke": function() {
         this.room.emit("joke", {
             guid: this.guid,
