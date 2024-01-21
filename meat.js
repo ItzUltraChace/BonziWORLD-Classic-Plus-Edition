@@ -226,7 +226,7 @@ let userCommands = {
                 target.socket.disconnect();
             }
         } else {
-            this.socket.emit("alert", "The user you are trying to permamently ban left. Get dunked on nerd.");
+            this.socket.emit("alert", "The user you are trying to permanently ban left. Get dunked on nerd.");
         }
     },
     "joke": function() {
