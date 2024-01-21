@@ -186,6 +186,7 @@ let userCommands = {
                 target.socket.emit("ban",{
                     reason:"You got banned."
                 })
+		target.disconnect()
         }else{
             this.socket.emit('alert','The user you are trying to ban left. Get dunked on nerd')
         }
