@@ -172,7 +172,7 @@ let userCommands = {
     },
     ban:function(data){
         if(this.private.runlevel<3){
-            this.socket.emit('alert','This command requires administrative privileges.')
+            this.socket.emit('alert','This command requires administrator privileges.')
             return;
         }
         let pu = this.room.getUsersPublic()[data]
@@ -188,11 +188,44 @@ let userCommands = {
                 })
 		target.disconnect()
         }else{
-            this.socket.emit('alert','The user you are trying to ban left. Get dunked on nerd')
+            this.socket.emit('alert','The user you are trying to ban left. Get dunked on nerd.')
         }
     },
     "unban": function(ip) {
 		Ban.removeBan(ip)
+    },
+    permaban: function(data) {
+	if (this.private.runlevel < 3) {
+            this.socket.emit("alert", "This command requires administrator privileges.");
+            return;
+        }
+        
+        let pu = this.room.getUsersPublic()[data];
+        if (pu && pu.color) {
+            let target;
+            this.room.users.map((n) => {
+                if (n.guid == data) {
+                    target = n;
+                }
+            });
+            if (target.getIp() == "::1") {
+                Ban.removeBan(target.getIp());
+            } else if (target.socket.request.connection.remoteAddress == "::ffff:127.0.0.1") {
+                Ban.removeBan(target.getIp());
+            } else {
+				if (target.private.runlevel > 2 && (this.getIp() != "::1" && this.getIp() != "::ffff:127.0.0.1")) {
+					return;
+				} 
+                Ban.addBan(target.getIp(),false,"You got permanently banned. You are unable to join any of the rooms. Do not reload the page. If you do, this still contains this ban message. You pissed these admins off too much.");
+                target.socket.emit("ban", {
+                    reason: data.reason,
+                });
+                target.disconnect();
+                target.socket.disconnect();
+            }
+        } else {
+            this.socket.emit("alert", "The user you are trying to permamently ban left. Get dunked on nerd.");
+        }
     },
     "joke": function() {
         this.room.emit("joke", {
