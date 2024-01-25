@@ -312,6 +312,24 @@ body.vaporwave #chat_send {
   #chat_send:active {
     background-position: 0 -67px; }
 
+
+
+@-webkit-keyframes deepfryer {
+   from { -webkit-filter:saturate(1) contrast(0%); }
+     to { -webkit-filter:saturate(10000) contrast(100000%); }
+}
+
+@keyframes deepfryer {
+ from {
+    -webkit-filter:saturate(1) contrast(0%);;
+            filter:saturate(1) contrast(0%);;
+    }
+  to {
+    -webkit-filter:saturate(10000) contrast(100000%);
+            filter:saturate(10000) contrast(100000%);
+    }
+}
+
 #chat_message_cont {
   padding: 4px; }
 
