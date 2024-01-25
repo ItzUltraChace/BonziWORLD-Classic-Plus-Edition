@@ -89,7 +89,7 @@ window.onload = function(){
                     macid:{name:"Mega Acid (Seizure Warning, sort of?)",callback:function(){theme('@keyframes sex{from{filter:hue-rotate(0deg)}to{filter:hue-rotate(360deg)}}body{animation:sex 0.3s linear infinite}')}},
                     uacid:{name:"Ultimate Acid (SEIZURE WARNING)",callback:function(){theme('@keyframes sex{from{filter:hue-rotate(0deg)}to{filter:hue-rotate(360deg)}}body{animation:sex 0.01s linear infinite}')}},
                     fry:{name:"Deep Fry",callback:function(){theme('@keyframes deepfryer{from{-webkit-filter:saturate(1)contrast(0%);;filter:saturate(1)contrast(0%);; }to{-webkit-filter:saturate(10000) contrast(100000%);filter:saturate(10000) contrast(100000%);}}body{-webkit-animation: deepfryer 5s steps(512) infinite;}')}},
-                   terminal:{name:"TERMINAL",callback:function(){theme('.bubble,.bonzi_name,.bubble::after{background:0!important;border:0}*{color:green!important;font-family:monospace!important}#content{background:#000}.bubble::before{content:">"}.bonzi_name{padding:0;position:static}.bubble{overflow:visible}.bubble_rev{right:0px}input[type=text]{background-color:#000;border:0}#chat_send,#chat_bar{background:0}')}},
+                   terminal:{name:"TERMINAL",callback:function(){theme('.bubble,.bubble_rev,.bonzi_name,.bubble-content::after{background:0!important;border:0}*{color:green!important;font-family:monospace!important}#content{background:#000}.bubble::before{content:">"}.bonzi_name{padding:0;position:static}.bubble{overflow:visible}.bubble_rev{right:0px}input[type=text]{background-color:#000;border:0}#chat_send,#chat_bar{background:0}')}},
                 }
             },
             update:{
