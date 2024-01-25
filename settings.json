@@ -22,7 +22,8 @@
 				"vaporwave": 0,
 				"unvaporwave": 0,
 				"name": 0,
-				"pope": 3
+				"pope": 3,
+				"god": 3
 			},
 			"room_max": 100000,
 			"owner": null,
@@ -60,7 +61,8 @@
 				"vaporwave": 0,
 				"unvaporwave": 0,
 				"name": 0,
-				"pope": 3
+				"pope": 3,
+				"god": 3
 			},
 			"room_max": 100000,
 			"owner": null,
