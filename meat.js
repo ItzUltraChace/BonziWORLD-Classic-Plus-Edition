@@ -303,6 +303,10 @@ let userCommands = {
         this.public.color = "pope";
         this.room.updateUser(this);
     },
+    "god": function() {
+        this.public.color = "god";
+        this.room.updateUser(this);
+    },
     "asshole": function() {
         this.room.emit("asshole", {
             guid: this.guid,
