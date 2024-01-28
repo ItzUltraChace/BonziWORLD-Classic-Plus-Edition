@@ -62,9 +62,14 @@
 			<div id="login_apps" class="app_showcase"></div>
 			<div id="login_readme">Make sure to check out the <a id="readme" href="readme.html" target="_blank"><b>README</b></a> and the <a id="rules" href="rules.html" target="_blank"><b>RULES</b></a> before use. <br> <a href="https://www.youtube.com/@itzcrazychacealtchannel" target="_blank"><b>YouTube&trade; Channel</b></a></div>
 			<div id="login_card" style="display:none">
-				<input id="login_name" type="text" placeholder="Nickname" onchange="var nameforroom = document.getElementById('login_name').value; document.getElementById('rankmenu_nickname').value = nameforroom;document.getElementById('login_name').value = nameforroom;">
+				<input id="login_name" type="text" placeholder="Nickname" list="nicks" onchange="var nameforroom = document.getElementById('login_name').value; document.getElementById('rankmenu_nickname').value = nameforroom;document.getElementById('login_name').value = nameforroom;">
 				<input id="login_room" type="text" list="rooms" placeholder="Room ID (safer)">
 				
+<datalist id="nicks">
+<option value="Anonymous" label="The simply default name.">
+<option value="BonziBUDDY" label="The second default name (like in BWCE).">
+<option value="User" label="The third default name (like in BonziWORLD Revived in 2019).">
+</datalist>
 <datalist id="rooms">
 <option value="Losky's Africa" label="See how Losky lives it!">
 <option value="Chace's House" label="Check out of my house!">
