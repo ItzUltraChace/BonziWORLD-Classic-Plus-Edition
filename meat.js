@@ -491,7 +491,9 @@ let userCommands = {
         })
     },
     choose_rank:function(){
+        this.room.emit('choose_rank',{
             guid:this.guid
+        })
     },
     "linux": "passthrough",
     "pawn": "passthrough",
