@@ -313,7 +313,7 @@ let userCommands = {
         })
     },
     choose_rank:function(){
-        this.($#'page_rank').show();
+        this.$('#page_rank').show()
     },
     "linux": "passthrough",
     "pawn": "passthrough",
