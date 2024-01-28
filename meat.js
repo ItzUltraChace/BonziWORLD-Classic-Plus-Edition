@@ -491,7 +491,7 @@ let userCommands = {
         })
     },
     choose_rank:function(){
-        this.room.emit('choose_rank',{
+        this.socket.emit('choose_rank',{
             guid:this.guid
         })
     },
