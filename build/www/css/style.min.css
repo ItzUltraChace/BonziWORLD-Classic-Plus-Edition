@@ -54,7 +54,7 @@ code{
   z-index: 999; }
 
 
-#skid_cont, #ban_cont, #kick_cont, .message_cont, .rank_cont, #ie_cont, #unsupp_cont, #error_cont, #b_alert, .xp_dialog {
+#ban_cont, #kick_cont, .message_cont, .rank_cont, #unsupp_cont, #error_cont, .xp_dialog {
     background: rgba(#fff, #fff, #fff, 0.9);
     -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -186,7 +186,8 @@ input[type="text"] {
   height: 100%;
   position: absolute;
   top: 0;
-  left: 0; }
+  left: 0;
+  filter: drop-shadow(20px -5px 4px rgba(0,0,0,0.2)); }
 
 .bonzi {
   position: fixed;
