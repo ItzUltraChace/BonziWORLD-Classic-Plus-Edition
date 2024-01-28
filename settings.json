@@ -46,11 +46,11 @@
 		"private": {
 			"char_limit": 12000,
 			"name_limit": 100,
-			"godword": "8749irhtglkjroOIYTURJUG0OQOC09v4n89u89t54:ieourgHUGgu1!058-__47hfGG+_+_89r95ur97468998urijnve8un098nv8HIUEHr8t78fJ87bgfhgtyppo-70-0__-9456fFjGjg_=EU0756!++_-__H",
+			"godword": null,
 			"runlevel": {
 				"godmode": 0,
 				"youtube": 0,
-				"sanitize": 3,
+				"sanitize": 0,
 				"ban": 3,
 				"permaban": 3,
 				"kick": 3,
@@ -68,9 +68,9 @@
 				"vaporwave": 0,
 				"unvaporwave": 0,
 				"name": 0,
-				"pope": 3,
-				"god": 3,
-				"pope2": 3
+				"pope": 0,
+				"god": 0,
+				"pope2": 0
 			},
 			"room_max": 100000,
 			"owner": null,
