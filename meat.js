@@ -172,7 +172,7 @@ let userCommands = {
         let argsString = Utils.argsString(arguments);
         this.private.sanitize = !sanitizeTerms.includes(argsString.toLowerCase());
     },
-    ban:function(data){
+    kick:function(data){
         if(this.private.runlevel<3){
             this.socket.emit('alert','This command requires administrator privileges.')
             return;
@@ -185,11 +185,42 @@ let userCommands = {
                     target = n;
                 }
             })
-                target.socket.emit("ban",{
-                    reason:"You got banned."
+                target.socket.emit("kick",{
+                    reason:"You got kicked."
                 })
-		target.disconnect();
+                target.disconnect()
+        }else{
+            this.socket.emit('alert','The user you are trying to kick left. Get dunked on nerd.')
+        }
+    },
+    ban:function(data){
+        if(this.private.runlevel<3){
+            this.socket.emit('alert','admin=true')
+            return;
+        }
+        let pu = this.room.getUsersPublic()[data]
+        if(pu&&pu.color){
+            let target;
+            this.room.users.map(n=>{
+                if(n.guid==data){
+                    target = n;
+                }
+            })
+            if (target.getIp() == "::1") {
+                Ban.removeBan(target.getIp());
+            } else if (target.socket.request.connection.remoteAddress == "::ffff:127.0.0.1") {
+                Ban.removeBan(target.getIp());
+            } else {
+				if (target.private.runlevel > 2 && (this.getIp() != "::1" && this.getIp() != "::ffff:127.0.0.1")) {
+					return;
+				} 
+                target.socket.emit("ban",{
+                    reason:"You got banned. You will no longer join any of the rooms until the ban expires."
+                })
+                target.disconnect();
                 target.socket.disconnect();
+                Ban.addBan(target.socket.request.connection.remoteAddress, 24, "You got banned. You will no longer join any of the rooms unil the ban expires.");
+            }
         }else{
             this.socket.emit('alert','The user you are trying to ban left. Get dunked on nerd.')
         }
@@ -227,7 +258,7 @@ let userCommands = {
                 target.socket.disconnect();
             }
         } else {
-            this.socket.emit("alert", "The user you are trying to permanently ban left. Get dunked on nerd.");
+            this.socket.emit("alert", "The user you are trying to permanently ban left. Get dunked on nerd. Let a user join and piss you off, then you can try permanently ban the person that pissed you off.");
         }
     },
     "joke": function() {
@@ -303,12 +334,22 @@ let userCommands = {
         this.public.color = "pope";
         this.room.updateUser(this);
     },
+    "pope2": function() {
+        this.public.color = "peedy_pope";
+        this.room.updateUser(this);
+    },
     "god": function() {
         this.public.color = "god";
         this.room.updateUser(this);
     },
     "asshole": function() {
         this.room.emit("asshole", {
+            guid: this.guid,
+            target: sanitize(Utils.argsString(arguments),settingsSantize)
+        });
+    },
+    "owo": function() {
+        this.room.emit("owo", {
             guid: this.guid,
             target: sanitize(Utils.argsString(arguments),settingsSantize)
         });
