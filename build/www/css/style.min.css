@@ -53,13 +53,37 @@ code{
   left: 0;
   z-index: 999; }
 
+
+#skid_cont, #ban_cont, #kick_cont, .message_cont, .rank_cont, #ie_cont, #unsupp_cont, #error_cont, #b_alert, .xp_dialog {
+    background: rgba(#fff, #fff, #fff, 0.9);
+    -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+    color: #d6e6ff;
+  opacity: 97%;
+  backdrop-filter: blur(6px) brightness(1.25);
+}
+
 .xp_dialog, .message_cont {
-  background: #ffffe1;
-  color: #000;
-  -webkit-border-radius: 9px;
-  -moz-border-radius: 9px;
-  border-radius: 9px;
-  border: #000000 solid 1px; }
+  border: 1px solid rgba(0, 0, 0, 0.725);
+  outline: 5;
+    background: rgba(#fff, #fff, #fff, 0.9);
+      background-color: rgba(#fff, #fff, #fff, 0.9);
+    -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+    color: #d6e6ff;
+  opacity: 97%;
+  backdrop-filter: blur(6px) brightness(1.25);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5) inset, 0 0 10px rgba(0, 0, 0, 0.75);
+   background-blend-mode: overlay;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  transform: translateZ(0x);
+  background-size: 100vw 100vh;
+  transition: background-color 125ms ease-in-out;
+  will-change: backdrop-filter, background-color;
+}
 
 .xp_textbox, #login_error, #login_readme, #login_name, #login_room {
   position: absolute;
@@ -143,12 +167,14 @@ input[type="text"] {
   color: #000; }
 
 .xp_bubble, .bubble, .bubble_rev {
-  background: #ffffe1;
+  background: linear-gradient(180deg, #fff, #ddd);
   color: #000;
-  -webkit-border-radius: 9px;
-  -moz-border-radius: 9px;
-  border-radius: 9px;
-  border: #000000 solid 1px; }
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 3px -3px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
 
 @font-face {
   font-family: 'Tahoma';
@@ -207,6 +233,10 @@ input[type="text"] {
     z-index: 0; }
 
 .bubble {
+    background: linear-gradient(180deg, #fff, #ddd);
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+    box-shadow: 5px 5px 3px -3px rgba(0, 0, 0, 0.4);
   left: 180px; }
   .bubble:after, .bubble:before {
     border-width: 4px 12px 4px 0; }
@@ -230,13 +260,15 @@ input[type="text"] {
 .bonzi_name {
   border-style: solid;
   border-width: 4px 12px 4px 0;
-  border-radius: 9px;
-  border: #000000 solid 1px;
+  border-radius: 7px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
   padding: 8px;
   position: absolute;
-  background: #ffffe1;
+  background: linear-gradient(180deg, #fff, #ddd);
+  box-shadow: 5px 5px 3px -3px rgba(0, 0, 0, 0.4);
   font-size: 12px;
-  color: #000; }
+  color: #000; 
+}
 
 .bubble_greentext {
   color: #789922; }
