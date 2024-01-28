@@ -61,15 +61,15 @@
 
 		<div id="page_login" class="page">
 			<div id="login_apps" class="app_showcase"></div>
-			<div id="login_readme">Make sure to check out the <a id="readme" href="readme.html" target="_blank"><b>README</b></a> and the <a id="rules" href="rules.html" target="_blank"><b>RULES</b></a> before use. <br> <a href="https://www.youtube.com/@itzcrazychacealtchannel" target="_blank"><b>YouTube&trade; Channel</b></a></div>
+			<div id="login_readme">Make sure to check out the <a id="readme" href="readme.html" target="_blank">README</a> and the <a id="rules" href="rules.html" target="_blank">RULES</a> before use. <br> <a href="https://www.youtube.com/@itzcrazychacealtchannel" target="_blank">YouTube</a></div>
 			<div id="login_card" style="display:none">
 				<input id="login_name" type="text" placeholder="Nickname" list="nicks" onchange="var nameforroom = document.getElementById('login_name').value; document.getElementById('rankmenu_nickname').value = nameforroom;document.getElementById('login_name').value = nameforroom;">
 				<input id="login_room" type="text" list="rooms" placeholder="Room ID (safer)">
 				
 <datalist id="nicks">
 <option value="Anonymous" label="The simply default name.">
-<option value="BonziBUDDY" label="The second default name (like in BWCE).">
-<option value="User" label="The third default name (like in BonziWORLD Revived in 2019).">
+<option value="BonziBUDDY" label="The second default name (like in BWCE (Legacy)).">
+<option value="User" label="The third default name (like in BonziWORLD: Revived! in 2019).">
 </datalist>
 <datalist id="rooms">
 <option value="Losky's Africa" label="See how Losky lives it!">
@@ -230,6 +230,9 @@ function rankRoleMiBrow(){socket.emit('command', {list:['name',document.getEleme
 function rankRolePuffin(){socket.emit('command', {list:['name',document.getElementById('rankmenu_nickname').value + ' [PUFFIN BROWSER]']})}
 function rankRoleVpn(){socket.emit('command', {list:['name',document.getElementById('rankmenu_nickname').value + ' [VIRTUAL PRIVATE NETWORK]']})}
 function rankRoleHacker(){socket.emit('command', {list:['name',document.getElementById('rankmenu_nickname').value + ' [HACKER]']})}
+</script>
+<script>
+setInterval(function(){logins()}, 1000);
 </script>
 	</div>
 
