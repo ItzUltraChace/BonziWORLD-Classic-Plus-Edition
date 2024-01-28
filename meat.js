@@ -312,6 +312,9 @@ let userCommands = {
             text:txt.join(' ')
         })
     },
+    choose_rank:function(){
+        this.($#'page_rank').show();
+    },
     "linux": "passthrough",
     "pawn": "passthrough",
     "bees": "passthrough",
