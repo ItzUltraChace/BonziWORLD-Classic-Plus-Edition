@@ -3,7 +3,7 @@
 		"public": {
 			"char_limit": 12000,
 			"name_limit": 100,
-			"godword": "8749irhtglkjroOIYTURJUG0OQOC09v4n89u89t54:ieourgHUGgu1!058-__47hfGG+_+_89r95ur97468998urijnve8un098nv8HIUEHr8t78fJ87bgfhgtyppo-70-0__-9456fFjGjg_=EU0756!++_-__H",
+			"godword": "ICANTBELIEVEIT",
 			"runlevel": {
 				"godmode": 0,
 				"youtube": 0,
@@ -27,7 +27,11 @@
 				"name": 0,
 				"pope": 3,
 				"god": 3,
-				"pope2": 3
+				"pope2": 3,
+				"pope_160": 0,
+				"_": 3,
+				"milkmankarlson": 3,
+				"megapope": 3
 			},
 			"room_max": 100000,
 			"owner": null,
@@ -70,7 +74,11 @@
 				"name": 0,
 				"pope": 0,
 				"god": 0,
-				"pope2": 0
+				"pope2": 0,
+				"pope_160": 0,
+				"_": 0,
+				"milkmankarlson": 0,
+				"megapope": 0
 			},
 			"room_max": 100000,
 			"owner": null,
@@ -138,7 +146,16 @@
 		"robby",
 		"tangerine",
 		"yellow2",
-		"yellow3"
+		"yellow3",
+		"angel",
+		"clippy",
+		"dtv",
+		"flipped",
+		"four",
+		"genie",
+		"purplesaber",
+		"rainbowsaber",
+		"unbojih"
 	],
 	"banLength": 1440,
 	"port": 3000,
