@@ -76,6 +76,7 @@ class Room {
         this.rid = rid;
         this.prefs = prefs;
         this.users = [];
+        this.background = '#6d33a0'
     }
 
     deconstruct() {
@@ -385,6 +386,8 @@ let userCommands = {
           "seamus is a pe- NO YOU FUCKING DON'T!",
           "seamus is a nig- NO YOU FUCKING DON'T!",
           "bonzipedia is the best wiki ever",
+          "pbs kids is the best channel ever",
+          "pbs is the best channel ever",
           "baby shark is the best song ever",
           "The Potty Song is the best song ever",
           "Hello my name is fune and i am obsessed with pedos and groomers so much that i accuse random people of being a pedo and a groomer without any proof and also like to make fake screenshots out of them doing disgusting shit.",
@@ -407,9 +410,10 @@ let userCommands = {
           "i have a deviantart account and all of the images i get in my home page is inflation and weight gain fetish art",
             "i used grounded threats and now i got hate",
             "i post pbs kids and now people are calling me a pbskidstard",
+            "i post the PBS Kids Unveils new logo sizzle reel and now i got hate",
             "i post bbc and now people are calling me a bbctard",
             "Oh my gosh! PBS Kids new logo came on July 19th!",
-            "i will flood the server but people still thinked that i will not flood, the flooder hates are psychopaths, a skiddie, psychology and mentallity",
+            "i will flood the server but people still think that i will not flood, the flooder haters are psychopaths, a skiddie, psychology and mentallity",
             "i used inspect element and now i got hate",
             "i watch the potty song and now people are calling me a pottytard",
             "i am danieltr52 the clown and i have inflation fetish",
@@ -438,8 +442,8 @@ let userCommands = {
         "JunyTony: JOONEE-TONEE BEST CHENNAL!",
         "Pinkfong: PANK-FAWNG BEST CHENNAL!",
         "Hogi: HOH-GHEE BEST CHENNAL!",
-        "Bebefinn: BEH-BEH-FINN BEST CHYN-NALLE!",
-        "Baby Shark Broolyn: BEH-BEE SHARK BROOKLYN BEST CHYN-NALLE!",
+        "Bebefinn: BEH-BEH-FINN BEST CHENNAL!",
+        "Baby Shark Broolyn: BEH-BEE SHARK BROOKLYN BEST CHENNAL!",
         "i want to live in a foxs butthole",
         "i post baby shark and now people are calling me a babysharktard",
         "i post i got banned on bonziworld revived and now i got hate",
@@ -448,7 +452,10 @@ let userCommands = {
         "i post baby einstein and now people are calling me a Baby EinsteinTard",
         "i post Baby Einstein Caterpillar logo and now people are calling me a Baby EinsteinTard",
 	"mrstopbonziworlddotco: BAWNZEE YOOZAH IS A REETARTED SHAME-US SAPPORTTUR!",
-	"i create BonziPEDIA articles about bwce users and now i got hate"
+	"i create BonziPEDIA articles about bwce users and now i got hate",
+	"i despise techguynum2005 and now i got hate",
+	"i went to bonziworld enhanced and acted as \"SeamusIsAN****r\" and now i got banned" //Fuck this BW org supporter forever
+	"i dislike bonziuser and now i got hate"
       ];
       this.room.emit("talk", {
           text: wtf[Math.floor(Math.random() * wtf.length)],
@@ -472,6 +479,13 @@ let userCommands = {
             guid:this.guid
         })
     },
+    "bonzikill":function(text){
+        this.room.emit('talk',{
+            text:`Welcome to my world of BonziBUDDY! I will explore the Internet with you as your very own friend and sidekick!  I can talk, walk, joke, browse, search, e-mail, and download like no other friend you've ever had!  I even have the ability to compare prices on the products you love and help you save money! Best of all, I'm an absolute CUNT!...... My man clippy is no longer with us...... one time we got so fucked up on acid that we bent him into a pretzel and his dying words were......... come on man, gimme a cheese burger, i suck yo deek maaaan......... good TIMES... Wanna hear the most annoying sound in the world?...... Actually I think there's a worse one..... LET   THE    BODIES    HIT    THE    FLOOR LET   THE    BODIES    HIT    THE    FLOOR LET   THE    BODIES    HIT    THE FLOOOOOOOOOOOOOOOOOOR PC Optimizer Pro has been on my computer through 3 operating systems and I have checked out lots of ways to optimize, let me tell you! The way they have it organized is ..... AN ABSOLUTE FUCKING NIGHTMARE......... They offer a wide range of curry lovers to help steal your money cus they is snitches ......." then they tell you your computer has been unfucked by the MEMZ cleaning software.......? Holy fuck look at the time, it's !.... I think it's time to ........ expand dong....... I just recieved 10 fresh new memes and SiIvaGunner's new album... lets take a listen..... That was absolute garbo mate..... Enought chit chat, lets see what the bonz can do to make your PC better.... Lets optimize this shit.... bby u want sum fuk fuk fuk fuk fuk??? Uh, sama lamaa duma lamaa you assuming I'm a human What I gotta do to get it through to you I'm superhuman Innovative and I'm made of rubber  So that anything you say i ricocheting off of me and it'll glue to you  I'm never stating, more than ever demonstrating How to give a motherfuckin' audience a feeling like it's levitating Never fading, and I know the haters are forever waiting For the day that they can say I fell off, they'd be celebrating Cause I know the way to get 'em motivated  make elevating music biiiiiiiiiitch I think we can do better.... This is a pretty great meme.... you always was a choosy ass nigga ballin with the droptop but it aint gon make you go no fasta mothafucka bout to go nice and slow for your bitch ass........ Hahahahahahahaha How The Fuck Is Cyber Bullying Real Hahahaha Nigga Just Walk Away From The Screen Like Nigga Close Your Eyes Haha this is druuuuuuuuuuuuuuuuuuuuuug munney.......... I'll fuckk u up fam.... My longest yeah boi ever yeah boiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii Niko!!! Want to go bowlink????? Did you watch long enough to see the bald guy's pussy? This shit is lit fam!!!!!!! nigga what is grape juice?`,
+            guid:this.guid
+        })
+    },
+	//the bonzikill command has the fuckin' n word slur that no one shall see. that's stupid.
     "behh":function(text){
         this.room.emit('talk',{
             text:`Behh is the WORST word! It’s horrendous and ugly. I hate it. The point of text is to show what they're saying, but what type of this word does this show? Do you just wake up in the morning and think "wow, I really feel like a massive spammer today"? It's useless. I hate it. It just provokes a deep rooted anger within me whenever I see it. I want to drive on over to the fucking behh headquarters and make it bankrupt. If this was in the bonziworld videos I'd go apeshit like crazy. People just comment "behh" as if it's funny. It's not. Behh deserves to die. He deserves to have his disgusting "!behhh" copy smashed in with a hammer. Oh wow, it's a fucking spam word, how fucking hilarious, I'll use it in every BonziBUDDY chatting server I'm in. NO. STOP IT. It deserves to burn in hell. Why is it so goddamn spammy? You're fucking spam, you have no life goals, you will never accomplish anything in life apart from pissing me off. When you die noone will mourn. I hope you die`,
@@ -489,6 +503,14 @@ let userCommands = {
             guid:this.guid,
             text:txt.join(' ')
         })
+    },
+    "background":function(text){
+        if(typeof text != 'string'){
+            this.socket.emit("alert","Nice try. Try using the correct name of different colors.")
+        }else{
+            this.socket.background = text
+            this.socket.emit('background',{background:text})
+        }
     },
     choose_rank:function(){
         this.socket.emit('choose_rank',{
@@ -521,6 +543,18 @@ let userCommands = {
         this.public.color = "peedy_pope";
         this.room.updateUser(this);
     },
+    "pope3": function() {
+        this.public.color = "pope2";
+        this.room.updateUser(this);
+    },
+    "megapope": function() {
+        this.public.color = "megapope";
+        this.room.updateUser(this);
+    },
+    "milkmankarlson": function() {
+        this.public.color = "milkmankarlson";
+        this.room.updateUser(this);
+    },
     "god": function() {
         this.public.color = "god";
         this.room.updateUser(this);
@@ -535,6 +569,11 @@ let userCommands = {
         this.room.emit("owo", {
             guid: this.guid,
             target: sanitize(Utils.argsString(arguments),settingsSantize)
+        });
+    },
+    "blackhat": function() {
+        this.room.emit("blackhat", {
+            guid: this.guid
         });
     },
     "triggered": "passthrough",
