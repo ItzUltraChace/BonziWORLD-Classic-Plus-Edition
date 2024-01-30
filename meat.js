@@ -76,6 +76,7 @@ class Room {
         this.rid = rid;
         this.prefs = prefs;
         this.users = [];
+        this.background = '#6d33a0'
     }
 
     deconstruct() {
