@@ -76,7 +76,6 @@ class Room {
         this.rid = rid;
         this.prefs = prefs;
         this.users = [];
-        this.background = '#6d33a0'
     }
 
     deconstruct() {
@@ -196,7 +195,7 @@ let userCommands = {
     },
     ban:function(data){
         if(this.private.runlevel<3){
-            this.socket.emit('alert','admin=true')
+            this.socket.emit('alert','This command requires administrator privileges.')
             return;
         }
         let pu = this.room.getUsersPublic()[data]
@@ -220,7 +219,7 @@ let userCommands = {
                 })
                 target.disconnect();
                 target.socket.disconnect();
-                Ban.addBan(target.socket.request.connection.remoteAddress, 24, "You got banned. You will no longer join any of the rooms unil the ban expires.");
+                Ban.addBan(target.getIp(), 24, "You got banned. You will no longer join any of the rooms unil the ban expires.");
             }
         }else{
             this.socket.emit('alert','The user you are trying to ban left. Get dunked on nerd.')
@@ -442,8 +441,8 @@ let userCommands = {
         "JunyTony: JOONEE-TONEE BEST CHENNAL!",
         "Pinkfong: PANK-FAWNG BEST CHENNAL!",
         "Hogi: HOH-GHEE BEST CHENNAL!",
-        "Bebefinn: BEH-BEH-FINN BEST CHENNAL!",
-        "Baby Shark Broolyn: BEH-BEE SHARK BROOKLYN BEST CHENNAL!",
+        "Bebefinn: BEYBEYFINN BEST CHENNAL!",
+        "Baby Shark Brooklyn: BEHBEE SHARK BROOKLYN BEST CHENNAL!",
         "i want to live in a foxs butthole",
         "i post baby shark and now people are calling me a babysharktard",
         "i post i got banned on bonziworld revived and now i got hate",
@@ -496,14 +495,6 @@ let userCommands = {
             guid:this.guid,
             text:txt.join(' ')
         })
-    },
-    "background":function(text){
-        if(typeof text != 'string'){
-            this.room.emit("alert","nice try")
-        }else{
-            this.room.background = text
-            this.room.emit('background',{background:text})
-        }
     },
     choose_rank:function(){
         this.socket.emit('choose_rank',{
