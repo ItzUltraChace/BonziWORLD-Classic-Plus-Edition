@@ -513,6 +513,8 @@ let userCommands = {
     "linux": "passthrough",
     "pawn": "passthrough",
     "bees": "passthrough",
+    "bonzikill": "passthrough",
+    "bonzikill2": "passthrough",
     "color": function(color) {
         if (typeof color != "undefined") {
             if (settings.bonziColors.indexOf(color) == -1)
