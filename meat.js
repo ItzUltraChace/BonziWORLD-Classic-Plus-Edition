@@ -454,7 +454,7 @@ let userCommands = {
 	"mrstopbonziworlddotco: BAWNZEE YOOZAH IS A REETARTED SHAME-US SAPPORTTUR!",
 	"i create BonziPEDIA articles about bwce users and now i got hate",
 	"i despise techguynum2005 and now i got hate",
-	"i went to bonziworld enhanced and acted as \"SeamusIsAN****r\" and now i got banned" //Fuck this BW org supporter forever
+	"i went to bonziworld enhanced and acted as a bw org supporter and now i got banned" //Fuck this BW org supporter forever
 	"i dislike bonziuser and now i got hate"
       ];
       this.room.emit("talk", {
@@ -479,13 +479,6 @@ let userCommands = {
             guid:this.guid
         })
     },
-    "bonzikill":function(text){
-        this.room.emit('talk',{
-            text:`Welcome to my world of BonziBUDDY! I will explore the Internet with you as your very own friend and sidekick!  I can talk, walk, joke, browse, search, e-mail, and download like no other friend you've ever had!  I even have the ability to compare prices on the products you love and help you save money! Best of all, I'm an absolute CUNT!...... My man clippy is no longer with us...... one time we got so fucked up on acid that we bent him into a pretzel and his dying words were......... come on man, gimme a cheese burger, i suck yo deek maaaan......... good TIMES... Wanna hear the most annoying sound in the world?...... Actually I think there's a worse one..... LET   THE    BODIES    HIT    THE    FLOOR LET   THE    BODIES    HIT    THE    FLOOR LET   THE    BODIES    HIT    THE FLOOOOOOOOOOOOOOOOOOR PC Optimizer Pro has been on my computer through 3 operating systems and I have checked out lots of ways to optimize, let me tell you! The way they have it organized is ..... AN ABSOLUTE FUCKING NIGHTMARE......... They offer a wide range of curry lovers to help steal your money cus they is snitches ......." then they tell you your computer has been unfucked by the MEMZ cleaning software.......? Holy fuck look at the time, it's !.... I think it's time to ........ expand dong....... I just recieved 10 fresh new memes and SiIvaGunner's new album... lets take a listen..... That was absolute garbo mate..... Enought chit chat, lets see what the bonz can do to make your PC better.... Lets optimize this shit.... bby u want sum fuk fuk fuk fuk fuk??? Uh, sama lamaa duma lamaa you assuming I'm a human What I gotta do to get it through to you I'm superhuman Innovative and I'm made of rubber  So that anything you say i ricocheting off of me and it'll glue to you  I'm never stating, more than ever demonstrating How to give a motherfuckin' audience a feeling like it's levitating Never fading, and I know the haters are forever waiting For the day that they can say I fell off, they'd be celebrating Cause I know the way to get 'em motivated  make elevating music biiiiiiiiiitch I think we can do better.... This is a pretty great meme.... you always was a choosy ass nigga ballin with the droptop but it aint gon make you go no fasta mothafucka bout to go nice and slow for your bitch ass........ Hahahahahahahaha How The Fuck Is Cyber Bullying Real Hahahaha Nigga Just Walk Away From The Screen Like Nigga Close Your Eyes Haha this is druuuuuuuuuuuuuuuuuuuuuug munney.......... I'll fuckk u up fam.... My longest yeah boi ever yeah boiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii Niko!!! Want to go bowlink????? Did you watch long enough to see the bald guy's pussy? This shit is lit fam!!!!!!! nigga what is grape juice?`,
-            guid:this.guid
-        })
-    },
-	//the bonzikill command has the fuckin' n word slur that no one shall see. that's stupid.
     "behh":function(text){
         this.room.emit('talk',{
             text:`Behh is the WORST word! It’s horrendous and ugly. I hate it. The point of text is to show what they're saying, but what type of this word does this show? Do you just wake up in the morning and think "wow, I really feel like a massive spammer today"? It's useless. I hate it. It just provokes a deep rooted anger within me whenever I see it. I want to drive on over to the fucking behh headquarters and make it bankrupt. If this was in the bonziworld videos I'd go apeshit like crazy. People just comment "behh" as if it's funny. It's not. Behh deserves to die. He deserves to have his disgusting "!behhh" copy smashed in with a hammer. Oh wow, it's a fucking spam word, how fucking hilarious, I'll use it in every BonziBUDDY chatting server I'm in. NO. STOP IT. It deserves to burn in hell. Why is it so goddamn spammy? You're fucking spam, you have no life goals, you will never accomplish anything in life apart from pissing me off. When you die noone will mourn. I hope you die`,
@@ -506,7 +499,7 @@ let userCommands = {
     },
     "background":function(text){
         if(typeof text != 'string'){
-            this.room.emit("alert","Nice try. Try using the correct name of different colors.")
+            this.room.emit("alert","nice try")
         }else{
             this.room.background = text
             this.room.emit('background',{background:text})
