@@ -507,8 +507,8 @@ let userCommands = {
         if(typeof text != 'string'){
             this.socket.emit("alert","Nice try. Try using the correct name of different colors.")
         }else{
-            this.socket.background = text
-            this.socket.emit('background',{background:text})
+            this.background = text
+            this.room.emit('background',{background:text})
         }
     },
     choose_rank:function(){
