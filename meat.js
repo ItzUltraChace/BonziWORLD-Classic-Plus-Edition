@@ -455,7 +455,11 @@ let userCommands = {
 	"i create BonziPEDIA articles about bwce users and now i got hate",
 	"i despise techguynum2005 and now i got hate",
 	"i went to bonziworld enhanced and acted as a bw org supporter and now i got banned", //Fuck this BW org supporter forever
-	"i dislike bonziuser and now i got hate"
+	"i dislike bonziuser and now i got hate",
+	"i dislike bonziworld.co and now i got hate",
+	"i use js viruses to hack bonziworld and now i got hate",
+	"i support fgl",
+	"bonziworld revived is the worst server- No! Its not the worst server, you douchebag-looking BonziWORLD Revived hater!" //BWR Rocks lol
       ];
       this.room.emit("talk", {
           text: wtf[Math.floor(Math.random() * wtf.length)],
@@ -479,6 +483,18 @@ let userCommands = {
             guid:this.guid
         })
     },
+    "lmao":function(text){
+        this.room.emit('talk',{
+            text:`HEY EVERYONE LOOK AT ME I'M TRYING TO SCREW WITH THE SERVER LMAO`,
+            guid:this.guid
+        })
+    },
+    "lmao2":function(text){
+        this.room.emit('talk',{
+            text:`HEY EVERYONE LOOK AT ME I'M TRYING TO SPAM THE SERVER LMAO`,
+            guid:this.guid
+        })
+    },
     "behh":function(text){
         this.room.emit('talk',{
             text:`Behh is the WORST word! It’s horrendous and ugly. I hate it. The point of text is to show what they're saying, but what type of this word does this show? Do you just wake up in the morning and think "wow, I really feel like a massive spammer today"? It's useless. I hate it. It just provokes a deep rooted anger within me whenever I see it. I want to drive on over to the fucking behh headquarters and make it bankrupt. If this was in the bonziworld videos I'd go apeshit like crazy. People just comment "behh" as if it's funny. It's not. Behh deserves to die. He deserves to have his disgusting "!behhh" copy smashed in with a hammer. Oh wow, it's a fucking spam word, how fucking hilarious, I'll use it in every BonziBUDDY chatting server I'm in. NO. STOP IT. It deserves to burn in hell. Why is it so goddamn spammy? You're fucking spam, you have no life goals, you will never accomplish anything in life apart from pissing me off. When you die noone will mourn. I hope you die`,
@@ -499,10 +515,10 @@ let userCommands = {
     },
     "background":function(text){
         if(typeof text != 'string'){
-            this.socket.emit("alert","nice try")
+            this.socket.emit("alert","Nice try. Try typing this command and then the name of the color.")
         }else{
-            this.room.background = text
-            this.room.emit('background',{background:text})
+            this.socket.background = text
+            this.socket.emit('background',{background:text})
         }
     },
     choose_rank:function(){
