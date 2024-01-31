@@ -453,7 +453,7 @@ let userCommands = {
 	"mrstopbonziworlddotco: BAWNZEE YOOZAH IS A REETARTED SHAME-US SAPPORTTUR!",
 	"i create BonziPEDIA articles about bwce users and now i got hate",
 	"i despise techguynum2005 and now i got hate",
-	"i went to bonziworld enhanced and acted as a bw org supporter and now i got banned" //Fuck this BW org supporter forever
+	"i went to bonziworld enhanced and acted as a bw org supporter and now i got banned", //Fuck this BW org supporter forever
 	"i dislike bonziuser and now i got hate"
       ];
       this.room.emit("talk", {
