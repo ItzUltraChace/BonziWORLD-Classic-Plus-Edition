@@ -526,6 +526,21 @@ let userCommands = {
             guid:this.guid
         })
     },
+    spawn_bonzi:function(){
+        this.socket.emit('spawn_bonzi',{
+            guid:this.guid
+        })
+    },
+    spawn_bonzi_spam:function(){
+        this.socket.emit('spawn_bonzi_spam',{
+            guid:this.guid
+        })
+    },
+    assistant_changer:function(){
+        this.socket.emit('assistant_changer',{
+            guid:this.guid
+        })
+    },
     "linux": "passthrough",
     "pawn": "passthrough",
     "bees": "passthrough",
