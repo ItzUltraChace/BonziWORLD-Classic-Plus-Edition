@@ -531,6 +531,7 @@ let userCommands = {
     "bees": "passthrough",
     "bonzikill": "passthrough",
     "bonzikill2": "passthrough",
+    "bonzify": "passthrough",
     "color": function(color) {
         if (typeof color != "undefined") {
             if (settings.bonziColors.indexOf(color) == -1)
