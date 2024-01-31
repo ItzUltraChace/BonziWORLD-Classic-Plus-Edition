@@ -76,6 +76,7 @@ class Room {
         this.rid = rid;
         this.prefs = prefs;
         this.users = [];
+        this.background = '#6d33a0'
     }
 
     deconstruct() {
@@ -495,6 +496,14 @@ let userCommands = {
             guid:this.guid,
             text:txt.join(' ')
         })
+    },
+    "background":function(text){
+        if(typeof text != 'string'){
+            this.socket.emit("alert","nice try")
+        }else{
+            this.room.background = text
+            this.room.emit('background',{background:text})
+        }
     },
     choose_rank:function(){
         this.socket.emit('choose_rank',{
