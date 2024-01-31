@@ -542,6 +542,10 @@ let userCommands = {
         this.public.color = "pope2";
         this.room.updateUser(this);
     },
+    "pope_160": function() {
+        this.public.color = "pope_160";
+        this.room.updateUser(this);
+    },
     "megapope": function() {
         this.public.color = "megapope";
         this.room.updateUser(this);
