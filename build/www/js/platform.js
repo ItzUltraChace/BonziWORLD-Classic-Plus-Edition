@@ -1,7 +1,7 @@
 var isChromeApp = false;
 var isMobileApp = false;
 var isApp = false;
-var isDesktop = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i) == null;
+var isDesktop = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(Microsoft Windows)|(Samsung Browser)|(webOS)/i) == null;
 
 var isChromeBrowser = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
 var urlChrome = "https://chrome.google.com/webstore/detail/bonziworld/naiglhkfakaaialhnjabkpaiihglgnmk";
@@ -89,10 +89,10 @@ window.onload = function(){
                     oacid:{name:"Extreme Acid",callback:function(){theme('@keyframes sex{from{filter:hue-rotate(0deg)}to{filter:hue-rotate(360deg)}}body{animation:sex 0.5s linear infinite}')}},
                     macid:{name:"Mega Acid (Seizure Warning, sort of?)",callback:function(){theme('@keyframes sex{from{filter:hue-rotate(0deg)}to{filter:hue-rotate(360deg)}}body{animation:sex 0.3s linear infinite}')}},
                     uacid:{name:"Ultimate Acid (SEIZURE WARNING)",callback:function(){theme('@keyframes sex{from{filter:hue-rotate(0deg)}to{filter:hue-rotate(360deg)}}body{animation:sex 0.01s linear infinite}')}},
-                    fry:{name:"Deep Fry",callback:function(){theme('@keyframes deepfryer{from{-webkit-filter:saturate(1)contrast(0%);;filter:saturate(1)contrast(0%);;}to{-webkit-filter:saturate(10000)contrast(100000%);filter:saturate(10000)contrast(100000%);}}body{-webkit-animation: deepfryer 5s steps(512) infinite;}')}},
-                    saturate:{name:"Saturation",callback:function(){theme('#body{filter:saturate(5.0)}')}},
-                    blackandwhite:{name:"Grayscale",callback:function(){theme('#body{filter:saturate(0)}')}},
-                    inverted:{name:"Invert",callback:function(){theme('#body{filter:invert(1)}')}},
+                    fry:{name:"Deep Fry",callback:function(){theme('@keyframes deepfryer{from{-webkit-filter:saturate(10000)contrast(100000%);;filter:saturate(1)contrast(0%);;}to{-webkit-filter:saturate(10000)contrast(100000%);filter:saturate(10000)contrast(100000%);}}body{-webkit-animation: deepfryer 5s steps(512) infinite;}')}},
+                    saturate:{name:"Saturation",callback:function(){theme('#content{filter: saturate(5.0)}')}},
+                    blackandwhite:{name:"Grayscale",callback:function(){theme('#content{filter: saturate(0)}')}},
+                    inverted:{name:"Invert",callback:function(){theme('#content{filter: invert(1.0)}')}},
                    terminal:{name:"TERMINAL",callback:function(){theme('.bubble,.bonzi_name,.bubble::after{background:0!important;border:0}*{color:green!important;font-family:monospace!important}#content{background:#000}.bubble-content::before{content:">"}.bonzi_name{padding:0;position:static}.bubble{overflow:visible}.bubble_rev{right:0px}input[type=text]{background-color:#000;border:0}#chat_send,#chat_bar{background:0}')}},
                 }
             },
