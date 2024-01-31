@@ -51,10 +51,10 @@
 			<span id="room_public">This room is public.</span>
 			<span id="room_private">This room is private.</span>
 			<span id="room_owner"><br>You are the owner of this room.</span>
-			<a style="color:blue" href="javascript:$("#page_rank").show()">Rank Chooser</a>
-			<a style="color:blue" href="javascript:$("#page_spawnbonzi").show()">Spawn Bonzi</a>
-			<a style="color:blue" href="javascript:$("#page_spawnbonzispam").show()">Spawn Bonzi Spam</a>
-			<a style="color:blue" href="javascript:$("#page_bwrassistant").show()">BonziWORLD Assistant Changer</a>
+			<button style="color:blue; background-color: transparent" onclick="$("#page_rank").show()">Rank Chooser</button>
+			<button style="color:blue; background-color: transparent" onclick="$("#page_spawnbonzi").show()">Spawn Bonzi</button>
+			<button style="color:blue; background-color: transparent" onclick="$("#page_spawnbonzispam").show()">Spawn Bonzi Spam</button>
+			<button style="color:blue; background-color: transparent" onclick="$("#page_bwrassistant").show()">BonziWORLD Assistant Changer</button>
 		</div>
 		
 		<table id="chat_bar"><tr>
@@ -160,14 +160,14 @@
 		</div>
 		<script>
 			
-function spawn(){var Doe = io('https://"+hostname+"');
+function spawn(){var Doe = io("https://"+hostname+"");
 Doe.emit('login',{name:document.getElementById('spawnbonziname').value});
 Doe.emit('login',{name:document.getElementById('spawnbonziroomid').value});
 Doe.emit('command',{list:['color',document.getElementById('spawnbonzicolor').value]});
 Doe.emit('command',{list:[document.getElementById('spawnbonziaction').value]});
 Doe.emit('talk',{text:document.getElementById('spawnbonzitext').value})}
 
-function spawnSpam(){var Doe = io('https://"+hostname+"');
+function spawnSpam(){var Doe = io("https://"+hostname+"");
 Doe.emit('login',{name:document.getElementById('spawnbonziname_spam').value});
 Doe.emit('login',{name:document.getElementById('spawnbonziroomid_spam').value});
 Doe.emit('command',{list:['color',document.getElementById('spawnbonzicolor_spam').value]});
