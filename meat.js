@@ -274,6 +274,11 @@ let userCommands = {
             rng: Math.random()
         });
     },
+    "triangular": function() {
+        this.room.emit("triangular", {
+            guid: this.guid
+        });
+    },
     "youtube": function(vidRaw) {
         var vid = this.private.sanitize ? sanitize(vidRaw) : vidRaw;
         this.room.emit("youtube", {
